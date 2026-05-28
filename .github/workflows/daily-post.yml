@@ -14,9 +14,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install -r tools/telegram-poster/requirements.txt
+        run: pip install -r requirements.txt
       - name: Send post
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python tools/telegram-poster/bot.py
+        run: python bot.py
